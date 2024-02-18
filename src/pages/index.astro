@@ -8,12 +8,14 @@ import Briefcase from "../icons/Briefcase.astro";
 import Mail from "../icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../icons/Code.astro";
+import Project from "../components/Project.astro";
 
 ---
 
 <Layout title="Portfolio de Kerly - FullStack Developer">
   <main class="px-4" >
-    <SectionContainer class="py-44 pb-22">
+    <SectionContainer class="py-44 pb-24">
       <h1 class="text-white text-4xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Hey, soy Kerly
         <a
@@ -49,7 +51,6 @@ import SectionContainer from "../components/SectionContainer.astro";
         </SocialPill>
       </nav>
     </SectionContainer>
-
     
     <SectionContainer id="experiencia">
       <h2 class="text-2xl font-semibold mb-8 flex gap-x-3 items-center">
@@ -57,6 +58,14 @@ import SectionContainer from "../components/SectionContainer.astro";
         Experiencia laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-8 flex gap-x-3 items-center">
+        <Code class="size-7"/>
+        Proyectos
+      </h2>
+      <Project />
     </SectionContainer>
   </main>
 </Layout>
