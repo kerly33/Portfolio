@@ -3,17 +3,19 @@ import LinkedIn from "../assets/icons/LinkedIn.astro";
 import Mail from "../assets/icons/Mail.astro";
 import Badge from "./Badge.astro";
 import SocialPill from "./SocialPill.astro";
+import Image from '../components/Image.astro';
 
-const personalImageAlt = "Kerly";
+const imageSrc = './IMG_6788.webp';
+const imageAlt = 'photo ker';
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-20"
-      src="/IMG_6788.webp"
-      alt={personalImageAlt}
-    />
+    <Image class="rounded-full size-20"
+    src={imageSrc} 
+    alt={imageAlt} 
+     />
+     
     <a
       href="https://www.linkedin.com/in/kerly-victoria-c-p"
       target="_blank"
