@@ -2,17 +2,18 @@
 export interface Props {
   date: string;
   title: string;
+  company: string;
   description: string;
   link?: string /* ? el link es undefined */;
 }
-const { date, title, description, link } = Astro.props;
+const { date, title, company, description, link } = Astro.props;
 ---
 
 <span
-  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3
-ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+  class="absolute flex items-center justify-center w-5 h-5 bg-blue-100 rounded-full -start-3
+ring-4 ring-white ">
   <svg
-    class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+    class="w-3 h-3 text-blue-800 dark:text-blue-900"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
@@ -26,7 +27,9 @@ ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
 <h3
   class="flex items-center mb-1 text-lg font-semibold text-yellow-200/90 opacity-90 ">
     {title}
-</h3> 
+</h3>
+<h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
+
 <time
   class="block mb-2 text-sm font-normal mt-4 leading-none text-sky-200/90">
   {date}
@@ -34,7 +37,7 @@ ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
 <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
   {description}
 </p>
-{
+<!-- {
   link && (
     <a
       href="{link}"
@@ -60,4 +63,4 @@ ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
       </svg>
     </a>
   )
-}
+} -->
